@@ -176,5 +176,12 @@ function getCommunes ($connexion) {
      $result = $connexion->query($sql);
      return $result->fetch_all(MYSQLI_ASSOC);
 }
+
+function getINSEE ($connexion, $Idc) {
+    $requete = "SELECT Code_INSEE FROM commune WHERE Idc = '$Idc'";
+    $res = mysqli_query($connexion, $requete);
+    $instances = mysqli_fetch_all($res, MYSQLI_ASSOC);
+    return $instances;
+}
 ?>
 

@@ -11,7 +11,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $dateFin = $_POST["datef"];
     $Gratuit_Payant = $_POST["choix"];
     $Idc = $_POST["idc"];
-    $Code_INSEE = $_POST["codeInsee"];
+    $row = getINSEE($connexion, $Idc);
+    $Code_INSEE = $row[0]["Code_INSEE"];
 
     if ($Gratuit_Payant == "Payant") {
         $Gratuit_Payant = 0;

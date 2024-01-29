@@ -32,13 +32,6 @@
 ?>
 </select>
 <br><br>
-<label for="codeInsee">Choisissez un code Insee :</label>
-<select id="codeInsee" name="codeInsee">
-<?php
-        foreach ($res as $row) {
-            echo "<option value='" . $row["Code_INSEE"] . "'>" . $row["Code_INSEE"] . "</option>";
-        }
-?>
 </select>
   <br><br>
   <input type="submit" value="Valider">
